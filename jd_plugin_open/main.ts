@@ -22,3 +22,5 @@ const openCommand: Command = {
     }).status();
   },
 };
+
+export default openCommand;

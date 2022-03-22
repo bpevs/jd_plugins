@@ -3,6 +3,8 @@ import {
   Directory,
 } from "https://deno.land/x/johnny_decimal@1.0.2/mod.ts";
 
+import openInSublime from "../shared/open_in_sublime.ts";
+
 const sublimeCommand: Command = {
   name: "sublime",
   alias: ["subl"],
@@ -12,12 +14,7 @@ const sublimeCommand: Command = {
   async fn(this: Directory, [str]: string[] = []) {
     const [location] = await this.findLocationsById(str);
     console.log(location.path);
-    await Deno.run({
-      cmd: ["open", "-a", "Sublime Text", location.path],
-      stdin: "piped",
-      stdout: "piped",
-      stderr: "piped",
-    }).status();
+    await openInSublime(location.path);
   },
 };
 

@@ -7,7 +7,7 @@ Makes a Daily Note dir in `10.01 Daily Notes`
 Structure of daily note is:
 
 ```
-YYYY_MM_DD
+YYYY-MM-DD
   > JOURNAL.md
   > attachments
   > cache
@@ -17,10 +17,10 @@ YYYY_MM_DD
 
 ```
 ---
-date: YYYY_MM_DD
+date: YYYY-MM-DD
 tags: [ dailynote ]
 ---
-# YYYY_MM_DD
+# YYYY-MM-DD
 
 ----
 ```

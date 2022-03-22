@@ -20,11 +20,11 @@ const dailyNoteCommand: Command = {
     const dailyNoteDir = getDailyNoteDir(this.$JD_HOME, name);
     const dailyNoteName = basename(dailyNoteDir);
 
-    ensureDir(join(dailyNoteDir, "attachments"));
+    await ensureDir(join(dailyNoteDir, "attachments"));
 
     // Setup Journal
     const journalPath = join(dailyNoteDir, "JOURNAL.md");
-    ensureFile(journalPath);
+    await ensureFile(journalPath);
     const journalText = await Deno.readTextFile(journalPath);
     if (!journalText) {
       await Deno.writeTextFile(

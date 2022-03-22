@@ -45,6 +45,7 @@ tags: [ dailynote ]
 ---
 # ${name}
 
+## Links
 ----
 `;
 }

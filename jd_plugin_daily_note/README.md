@@ -22,5 +22,6 @@ tags: [ dailynote ]
 ---
 # YYYY-MM-DD
 
+## Links
 ----
 ```
